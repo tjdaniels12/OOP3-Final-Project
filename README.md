@@ -1,2 +1,4 @@
 # OOP3-FinalProject
- It's Hearthstone, but scuffed
+ Soon to be Hearthstone 2.0
+ 
+*we are not affiliated with Hearthstone*
