@@ -65,6 +65,7 @@
     <Compile Include="Assets\TylerTesting\DeckColour.cs" />
     <Compile Include="Assets\TylerTesting\DrawButton.cs" />
     <Compile Include="Assets\TylerTesting\test.cs" />
+    <Compile Include="Assets\board.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>C:/Users/tjdan/Desktop/School/OOP3/Dream Team/Drag &amp; Drop/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>

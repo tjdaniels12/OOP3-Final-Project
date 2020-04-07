@@ -11,7 +11,6 @@ public class test : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
         //this.transform.position = this.transform.position + new Vector3(3, 0);
         var go = Instantiate(Card, new Vector3(0, 0), Quaternion.identity);
         go.transform.SetParent(Hand.transform);

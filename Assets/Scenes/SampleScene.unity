@@ -156,7 +156,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -355, y: 89}
+  m_AnchoredPosition: {x: -421, y: -234.5}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &164370144
@@ -173,7 +173,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   width: 100
   Card: {fileID: 5835170530664561586, guid: 37c3310295a2edc44b38b6a3de8b891b, type: 3}
-  Deck: {fileID: 164370145}
+  DeckPic: {fileID: 164370145}
   Hand: {fileID: 2119825309}
 --- !u!114 &164370145
 MonoBehaviour:
@@ -488,8 +488,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 0, y: 320}
-  m_SizeDelta: {x: 0, y: 155}
+  m_AnchoredPosition: {x: -1.2750244, y: 564}
+  m_SizeDelta: {x: -43.45, y: 332.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1280566604
 MonoBehaviour:
@@ -718,8 +718,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 450, y: 59}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: -421, y: -332}
+  m_SizeDelta: {x: 100, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1693259633
 MonoBehaviour:
@@ -737,7 +737,7 @@ MonoBehaviour:
   width: 100
   Card: {fileID: 5835170530664561586, guid: 37c3310295a2edc44b38b6a3de8b891b, type: 3}
   Deck: {fileID: 164370145}
-  Hand: {fileID: 2119825309}
+  Hand: {fileID: 0}
 --- !u!114 &1693259634
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -930,8 +930,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 0, y: 134}
-  m_SizeDelta: {x: 0, y: 155}
+  m_AnchoredPosition: {x: 99.1, y: 149.5}
+  m_SizeDelta: {x: -244.2, y: 260}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2119825307
 MonoBehaviour:
@@ -990,8 +990,8 @@ MonoBehaviour:
   m_Spacing: 2
   m_ChildForceExpandWidth: 0
   m_ChildForceExpandHeight: 0
-  m_ChildControlWidth: 0
-  m_ChildControlHeight: 0
+  m_ChildControlWidth: 1
+  m_ChildControlHeight: 1
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
 --- !u!114 &2119825310

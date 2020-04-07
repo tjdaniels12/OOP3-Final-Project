@@ -83,21 +83,26 @@ public class Deck : MonoBehaviour
     {
         if (deck.Count != 0)
         {
-            var go = Instantiate(Card, new Vector3(0, 0), Quaternion.identity);
-            go.transform.SetParent(Hand.transform);
-            CardDisplay display = go.GetComponent<CardDisplay>();
-            display.card = deck[0];
-            deck.RemoveAt(0);
-            Debug.Log(deck.Count);
-            width = (float)deck.Count * 2.5f;
-            Debug.Log(width);
-            if (width > 100f)
+           
+            if (Hand.transform.childCount < 10)
             {
-                width = 100f;
-                Debug.Log("Capped to 40.");
+                var go = Instantiate(Card, new Vector3(0, 0), Quaternion.identity);
+                go.transform.SetParent(Hand.transform);
+                CardDisplay display = go.GetComponent<CardDisplay>();
+                display.card = deck[0];
+                deck.RemoveAt(0);
+                Debug.Log(deck.Count);
+                width = (float)deck.Count * 2.5f;
+                Debug.Log(width);
+                if (width > 100f)
+                {
+                    width = 100f;
+                    Debug.Log("Capped to 40.");
+                }
+                DeckPic.rectTransform.sizeDelta = new Vector2(width, 100);
+                Debug.Log(width);
             }
-            DeckPic.rectTransform.sizeDelta = new Vector2(width, 100);
-            Debug.Log(width);
+            
         }
         //else fatigue();
     }
