@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+
 public class CardDisplay : MonoBehaviour{    
     public Card card;
     public Text nameText;
@@ -30,6 +31,5 @@ public class CardDisplay : MonoBehaviour{
         }
         //if(card.manaCost > )
     }
-    public void onPlay(){card.Playing(); }
-
+    public void onPlay(){card.onPlay(); Start();}
 }

@@ -9,15 +9,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e1fd4e345f4ff1348b061fa428a633b5, type: 3}
+  m_Script: {fileID: 11500000, guid: 2b1e6c9434627f140953181549982f5a, type: 3}
   m_Name: DarkPixi
   m_EditorClassIdentifier: 
-  name: DarkPixi
-  description: Pixi, but Dark
+  name: Dark Pixi
+  description: 'BattleCry: Gain 10 health when played'
   artwork: {fileID: 21300000, guid: be2ef90ffa4cfaf42b1bac9d425b0a3e, type: 3}
-  manaCost: 1
+  manaCost: 5
   attack: 1
-  health: 3
-  baseMana: 3
+  health: 1
+  baseMana: 5
   baseAttack: 1
   baseHealth: 1
+  buffAmnt: 8

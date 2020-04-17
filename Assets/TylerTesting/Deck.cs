@@ -23,13 +23,16 @@ public class Deck : MonoBehaviour
     {
         //card = Resources.Load<Card>("dug");
         //Card someInstance = ScriptableObject.CreateInstance("dug") as Card;
-        Card test = Resources.Load<Card>("dug");
+        Card test = Resources.Load<Card>("dugtest");
         Card newUniqueSO = Object.Instantiate(test);
         Card test3 = Object.Instantiate(test);
         Card test4 = Object.Instantiate(test);
         deck.Add(newUniqueSO);
         deck.Add(test3);
         deck.Add(test4);
+        test = Resources.Load<Card>("DarkPixi");
+        newUniqueSO = Object.Instantiate(test);
+        deck.Add(newUniqueSO);
 
 
         for(int i =0; i<40;i++){

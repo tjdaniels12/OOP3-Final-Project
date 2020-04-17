@@ -2,9 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class dug : MonoBehaviour
+[CreateAssetMenu(fileName = "Dug", menuName = "Dug Card")]
+public class dug : Card
 {
-
-    // Update is called once per frame
-
+    public override void onPlay(){
+        health=health+1;
+        Debug.Log("DUG WAS PLAYED");
+        }
 }

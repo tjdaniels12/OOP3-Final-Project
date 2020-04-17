@@ -13,8 +13,6 @@ public class Card : ScriptableObject{
     public int attack;
     public int health;
     
-    public delegate void onPlay();
-    public onPlay Playing;
 
 
     [SerializeField]
@@ -24,11 +22,9 @@ public class Card : ScriptableObject{
     [SerializeField]
     private int baseHealth;
 
-    //public void inPlay(){Playing();}
+    public virtual void onPlay(){}
 
     public int getBaseAttack(){ return baseAttack;}
     public int getBaseHealth(){ return baseHealth;}
     public int getBaseMana(){ return baseMana;}
-
-
 }
