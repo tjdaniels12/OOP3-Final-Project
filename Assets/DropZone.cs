@@ -13,11 +13,23 @@ public class DropZone : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPoin
         //Debug.Log("OnExit to " + gameObject.name);
     }
     public void OnDrop(PointerEventData eventData){
-        Debug.Log(eventData.pointerDrag.name + "OnDrop to " + gameObject.name);
-
+        
         Draggable d = eventData.pointerDrag.GetComponent<Draggable>();
+        if(d.inPlay) return;
+
+        Debug.Log(eventData.pointerDrag.name + " OnDrop to " + gameObject.name);
+        
+        
+
         if(d!=null){
             d.originalParent = this.transform;
+        }
+        if(gameObject.name == "Table"){
+            if(!d.inPlay){
+                GameObject droppedCard = eventData.pointerDrag;
+                droppedCard.GetComponent<CardDisplay>().onPlay();
+            }
+            d.inPlay=true;
         }
 
     }

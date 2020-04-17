@@ -22,48 +22,21 @@ public class Deck : MonoBehaviour
     void Start()
     {
         //card = Resources.Load<Card>("dug");
-        deck.Add(Resources.Load<Card>("dug"));
-        deck.Add(Resources.Load<Card>("doggo"));
-        deck.Add(Resources.Load<Card>("dug"));
-        deck.Add(Resources.Load<Card>("doggo"));
-        deck.Add(Resources.Load<Card>("dug"));
-        deck.Add(Resources.Load<Card>("doggo"));
-        deck.Add(Resources.Load<Card>("dug"));
-        deck.Add(Resources.Load<Card>("doggo"));
-        deck.Add(Resources.Load<Card>("dug"));
-        deck.Add(Resources.Load<Card>("doggo"));
-        deck.Add(Resources.Load<Card>("dug"));
-        deck.Add(Resources.Load<Card>("doggo"));
-        deck.Add(Resources.Load<Card>("dug"));
-        deck.Add(Resources.Load<Card>("doggo"));
-        deck.Add(Resources.Load<Card>("dug"));
-        deck.Add(Resources.Load<Card>("doggo"));
-        deck.Add(Resources.Load<Card>("dug"));
-        deck.Add(Resources.Load<Card>("doggo"));
-        deck.Add(Resources.Load<Card>("dug"));
-        deck.Add(Resources.Load<Card>("doggo"));
-        deck.Add(Resources.Load<Card>("dug"));
-        deck.Add(Resources.Load<Card>("doggo"));
-        deck.Add(Resources.Load<Card>("dug"));
-        deck.Add(Resources.Load<Card>("doggo"));
-        deck.Add(Resources.Load<Card>("dug"));
-        deck.Add(Resources.Load<Card>("doggo"));
-        deck.Add(Resources.Load<Card>("dug"));
-        deck.Add(Resources.Load<Card>("doggo"));
-        deck.Add(Resources.Load<Card>("dug"));
-        deck.Add(Resources.Load<Card>("doggo"));
-        deck.Add(Resources.Load<Card>("dug"));
-        deck.Add(Resources.Load<Card>("doggo"));
-        deck.Add(Resources.Load<Card>("dug"));
-        deck.Add(Resources.Load<Card>("doggo"));
-        deck.Add(Resources.Load<Card>("dug"));
-        deck.Add(Resources.Load<Card>("doggo"));
-        deck.Add(Resources.Load<Card>("dug"));
-        deck.Add(Resources.Load<Card>("doggo"));
-        deck.Add(Resources.Load<Card>("dug"));
-        deck.Add(Resources.Load<Card>("doggo"));
-        deck.Add(Resources.Load<Card>("dug"));
-        deck.Add(Resources.Load<Card>("doggo"));
+        //Card someInstance = ScriptableObject.CreateInstance("dug") as Card;
+        Card test = Resources.Load<Card>("dug");
+        Card newUniqueSO = Object.Instantiate(test);
+        Card test3 = Object.Instantiate(test);
+        Card test4 = Object.Instantiate(test);
+        deck.Add(newUniqueSO);
+        deck.Add(test3);
+        deck.Add(test4);
+
+
+        for(int i =0; i<40;i++){
+            newUniqueSO = null;
+            newUniqueSO = Object.Instantiate(test);
+            deck.Add(newUniqueSO);
+        }
         Debug.Log(deck.Count);
     }
 
@@ -74,8 +47,6 @@ public class Deck : MonoBehaviour
             print("space key was pressed");
 
             DrawCard();
-            
-
         }
     }
 
@@ -88,9 +59,14 @@ public class Deck : MonoBehaviour
             {
                 var go = Instantiate(Card, new Vector3(0, 0), Quaternion.identity);
                 go.transform.SetParent(Hand.transform);
+
+
                 CardDisplay display = go.GetComponent<CardDisplay>();
                 display.card = deck[0];
                 deck.RemoveAt(0);
+                
+
+
                 Debug.Log(deck.Count);
                 width = (float)deck.Count * 2.5f;
                 Debug.Log(width);

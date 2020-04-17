@@ -8,11 +8,14 @@ public class Draggable : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
     private float cardSpeed = 10f;
     public Transform originalParent = null;
     public LineRenderer line;
+    public bool inPlay = false; 
+
 
     GameObject placeholder = null;
     ///Methods
     public void OnBeginDrag(PointerEventData eventData){
         Debug.Log("OnBeginDrag");
+
 
         if (this.transform.parent.gameObject == GameObject.Find("Table"))
         {
@@ -47,6 +50,7 @@ public class Draggable : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
     }
 
     public void OnDrag(PointerEventData cursor){
+        //if(inPlay) return;
         //  Debug.Log("OnDrag");
         if (this.transform.parent.gameObject == GameObject.Find("Table"))
         {
@@ -61,8 +65,6 @@ public class Draggable : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
         else
         {
             this.transform.position = cursor.position;
-
-
             int newSiblingIndex = originalParent.childCount;
 
             for (int i = 0; i < originalParent.childCount; i++)
@@ -80,12 +82,13 @@ public class Draggable : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
             }
 
             placeholder.transform.SetSiblingIndex(newSiblingIndex);
+
         }
         
     }
 
     public void OnEndDrag(PointerEventData eventData){
-        //Debug.Log("OnEndDrag");
+        Debug.Log("OnEndDrag");
 
         if (this.transform.parent.gameObject == GameObject.Find("Table"))
         {
@@ -96,7 +99,6 @@ public class Draggable : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
             this.transform.SetParent(originalParent);
             this.transform.SetSiblingIndex(placeholder.transform.GetSiblingIndex());
             GetComponent<CanvasGroup>().blocksRaycasts = true;
-
             Destroy(placeholder);
         }
     }
