@@ -10,14 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e1fd4e345f4ff1348b061fa428a633b5, type: 3}
-  m_Name: doggo
+  m_Name: Johnsonuk
   m_EditorClassIdentifier: 
-  name: Doggo
-  description: bork hard
-  artwork: {fileID: 21300000, guid: 24dff552553fcf34baeb0c13109fee33, type: 3}
-  manaCost: 6
-  attack: 7
-  health: 6
-  baseMana: 6
-  baseAttack: 7
-  baseHealth: 6
+  name: Johnsonuk
+  description: 
+  artwork: {fileID: 21300000, guid: dcf61edf123f4c544b14135f49cf68e7, type: 3}
+  manaCost: 4
+  attack: 2
+  health: 4
+  baseMana: 4
+  baseAttack: 2
+  baseHealth: 4
