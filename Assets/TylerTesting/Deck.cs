@@ -48,9 +48,15 @@ public class Deck : MonoBehaviour
 
             DrawCard();
         }
+
+        if (TurnSystem.startTurn == true)
+        {
+            DrawCard();
+            TurnSystem.startTurn = false;
+        }
     }
 
-    void DrawCard()
+    public void DrawCard()
     {
         if (deck.Count != 0)
         {

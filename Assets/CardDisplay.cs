@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-public class CardDisplay : MonoBehaviour{    
+public class CardDisplay : MonoBehaviour
+{
     public Card card;
     public Text nameText;
     public Text descriptionText;
@@ -15,21 +16,22 @@ public class CardDisplay : MonoBehaviour{
 
     void Start()// Start is called before the first frame update
     {
-        nameText.text=card.name;
-        descriptionText.text=card.description;
-        artworkImage.sprite=card.artwork;
+        nameText.text = card.name;
+        descriptionText.text = card.description;
+        artworkImage.sprite = card.artwork;
         manaText.text = card.manaCost.ToString();
         attackText.text = card.attack.ToString();
         healthText.text = card.health.ToString();
 
-        if(card.attack > card.getBaseAttack()){
+        if (card.attack > card.getBaseAttack())
+        {
             attackText.color = Color.green;
         }
-        if(card.attack < card.getBaseAttack()){
+        if (card.attack < card.getBaseAttack())
+        {
             attackText.color = Color.red;
         }
         //if(card.manaCost > )
     }
-    public void onPlay(){card.Playing(); }
-
+    public void onPlay() { card.onPlay(); Start(); }
 }

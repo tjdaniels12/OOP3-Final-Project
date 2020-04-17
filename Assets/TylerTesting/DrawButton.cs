@@ -11,7 +11,7 @@ public class DrawButton : MonoBehaviour
     public float width = 100f;
     public GameObject Card;
     public Image Deck;
-    public LayoutElement Hand;
+    public HorizontalLayoutGroup Hand;
 
     List<Card> deck = new List<Card>();
     Card card;
