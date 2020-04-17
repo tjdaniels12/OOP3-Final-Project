@@ -16,6 +16,10 @@ public class CardDisplay : MonoBehaviour{
 
     void Start()// Start is called before the first frame update
     {
+        updateCard();
+    }
+
+    void updateCard(){        
         nameText.text=card.name;
         descriptionText.text=card.description;
         artworkImage.sprite=card.artwork;
@@ -29,7 +33,16 @@ public class CardDisplay : MonoBehaviour{
         if(card.attack < card.getBaseAttack()){
             attackText.color = Color.red;
         }
-        //if(card.manaCost > )
+
+        if(card.health > card.getBaseHealth()){
+            healthText.color = Color.green;
+        }
+        if(card.health < card.getBaseHealth()){
+            healthText.color = Color.red;
+        }
     }
-    public void onPlay(){card.onPlay(); Start();}
+    public void onPlay(){
+        card.onPlay(); 
+        updateCard();
+    }
 }

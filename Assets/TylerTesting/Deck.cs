@@ -23,7 +23,7 @@ public class Deck : MonoBehaviour
     {
         //card = Resources.Load<Card>("dug");
         //Card someInstance = ScriptableObject.CreateInstance("dug") as Card;
-        Card test = Resources.Load<Card>("dugtest");
+        Card test = Resources.Load<Card>("Doppler");
         Card newUniqueSO = Object.Instantiate(test);
         Card test3 = Object.Instantiate(test);
         Card test4 = Object.Instantiate(test);
@@ -41,6 +41,8 @@ public class Deck : MonoBehaviour
             deck.Add(newUniqueSO);
         }
         Debug.Log(deck.Count);
+
+        
     }
 
     void Update()

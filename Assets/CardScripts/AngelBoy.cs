@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "AngelBoy", menuName = "AngelBoy Card")]
+//[CreateAssetMenu(fileName = "AngelBoy", menuName = "AngelBoy Card")]
 public class AngelBoy : Card
 {
     public override void onPlay(){

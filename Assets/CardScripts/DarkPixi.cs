@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "DarkPixi", menuName = "Pixi Card")]
+//[CreateAssetMenu(fileName = "DarkPixi", menuName = "Pixi Card")]
 public class DarkPixi : Card
 {
     public int buffAmnt = 3;
